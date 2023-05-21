@@ -1,0 +1,23 @@
+.slider-item {
+    width: fit-content;
+}
+
+.jq-inner img {
+    display: none;
+}
+
+.jq-inner img.jq-active {
+    display: inline-block;
+}
+
+.red{
+    border: red 10px solid;
+}
+
+.green{
+    border: green 10px solid;
+}
+
+.blue{
+    border: blue 10px solid;
+}

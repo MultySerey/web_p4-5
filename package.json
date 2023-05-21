@@ -1,0 +1,17 @@
+{
+  "name": "web_p4-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MultySerey",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.7.0",
+    "parcel": "^2.8.3",
+    "popper": "^1.0.1"
+  }
+}
