@@ -1,4 +1,11 @@
-$(document).ready(function () {
+var jquery = require("jquery");
+window.$ = window.jQuery = jquery;
+import 'bootstrap/dist/css/bootstrap.css';
+var $ = require('jquery');
+window.$ = $;
+require('bootstrap');
+
+$(document).ready(function() {
     const jqNext = $('.jq-next');
     const jqPrev = $('.jq-prev');
     const guys = $('.guy').length;
@@ -19,6 +26,7 @@ $(document).ready(function () {
         }
         console.log(index, guys);
     });
+
     jqPrev.on('click', function () {
         var currentImg = $('.jq-active');
         var prevImg = currentImg.prev();
