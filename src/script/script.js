@@ -5,7 +5,17 @@ var $ = require('jquery');
 window.$ = $;
 require('bootstrap');
 
-$(document).ready(function() {
+$(document).ready(function () {
+    var myModal = $('#myModal');
+    $(".jq-btn").on('click', function () {
+        myModal.attr("style", "display:block");
+        console.log('modal open');
+    });
+    $('.myClose').on('click', function () {
+        myModal.attr("style", "display:none");
+        console.log('modal close');
+    });
+
     const jqNext = $('.jq-next');
     const jqPrev = $('.jq-prev');
     const guys = $('.guy').length;

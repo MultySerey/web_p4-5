@@ -1,7 +1,24 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.jq,
+.bs {
+    height: 100%;
+    width: 50%;
+    border: black 1px solid;
+}
+
 .slider-item {
     width: fit-content;
+}
+
+.guy {
+    transition: 1s ease;
 }
 
 .jq-inner img {
@@ -12,14 +29,50 @@
     display: inline-block;
 }
 
-.red{
+.red {
     border: red 10px solid;
 }
 
-.green{
+.green {
     border: green 10px solid;
 }
 
-.blue{
+.blue {
     border: blue 10px solid;
+}
+
+.modal {
+    position: relative;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
