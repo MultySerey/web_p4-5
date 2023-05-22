@@ -2,10 +2,10 @@
   "name": "web_p4-5",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "dev": "npx parcel src/index.html",
-    "build": "npx parcel build src/index.html"
+    "build": "npx parcel src/index.html"
   },
   "author": "MultySerey",
   "license": "ISC",
