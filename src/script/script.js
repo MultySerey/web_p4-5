@@ -18,39 +18,38 @@ $(document).ready(function () {
 
     const jqNext = $('.jq-next');
     const jqPrev = $('.jq-prev');
-    const guys = $('.guy').length;
-    var index = 1;
+    const guys = $('.guy');
+    var index = 0;
 
     jqNext.on('click', function () {
-        var currentImg = $('.jq-active');
-        var nextImg = currentImg.next();
-
-        if (index >= guys) {
-            jqNext.prop('disabled', true);
+        const nextIndex = index + 1;
+        if (nextIndex < guys.length - 1) {
+            jqPrev.prop('disabled', false);
         }
         else {
-            index++;
-            jqPrev.prop('disabled', false);
-            currentImg.removeClass('jq-active');
-            nextImg.addClass('jq-active');
+            jqNext.prop('disabled', true);
         }
-        console.log(index, guys);
+        const currentGuy = $("[data-index=\"" + index + "\"]"),
+            nextGuy = $("[data-index=\"" + nextIndex + "\"]");
+
+        currentGuy.attr('data-status', 'after');
+        nextGuy.attr('data-status', 'active');
+        index = nextIndex;
     });
 
     jqPrev.on('click', function () {
-        var currentImg = $('.jq-active');
-        var prevImg = currentImg.prev();
-
-        jqNext.prop('disabled', false);
-        if (index <= 1) {
-            jqPrev.prop('disabled', true);
+        const prevIndex = index - 1;
+        if (prevIndex > 0) {
+            jqNext.prop('disabled', false);
         }
         else {
-            index--;
-            jqNext.prop('disabled', false);
-            currentImg.removeClass('jq-active');
-            prevImg.addClass('jq-active');
+            jqPrev.prop('disabled', true);
         }
-        console.log(index, guys);
+        const currentGuy = $("[data-index=\"" + index + "\"]"),
+        prevGuy = $("[data-index=\"" + prevIndex + "\"]");
+
+        currentGuy.attr('data-status', 'unknown');
+        prevGuy.attr('data-status', 'active');
+        index = prevIndex;
     });
 });

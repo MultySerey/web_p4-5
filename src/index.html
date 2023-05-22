@@ -11,12 +11,15 @@
 
 <body>
     <div class="jq">
+        <h3>Модальное на JQuery</h3>
         <div class="btns">
-            <button class="btn-modal btn btn-warning jq-btn">jquery</button>
+            <button class="btn-modal btn btn-warning jq-btn">Кнопка</button>
         </div>
         <div id="myModal" class="modal">
             <div class="modal-content">
-                <span class="myClose">&times;</span>
+                <button class="myClose">
+                    <i class="fa-solid fa-x"></i>
+                </button>
                 <img class="modal-cat" src="https://upload.wikimedia.org/wikipedia/en/0/08/I_Can_See_the_Whole_Room.jpg" alt="">
             </div>
         </div>
@@ -27,20 +30,21 @@
             <button class="jq-next">Вперёд</button>
             <div class="jq-outer">
                 <div class="jq-inner">
-                    <img class="guy jq-active red"
+                    <img class="guy red" data-index="0" data-status="active"
                         src="https://upload.wikimedia.org/wikipedia/en/0/08/I_Can_See_the_Whole_Room.jpg">
-                    <img class="guy green"
+                    <img class="guy green" data-index="1" data-status="unknown"
                         src="https://upload.wikimedia.org/wikipedia/en/0/08/I_Can_See_the_Whole_Room.jpg">
-                    <img class="guy blue"
+                    <img class="guy blue" data-index="2" data-status="unknown"
                         src="https://upload.wikimedia.org/wikipedia/en/0/08/I_Can_See_the_Whole_Room.jpg">
                 </div>
             </div>
         </div>
     </div>
     <div class="bs">
+        <h3>Модальное на Bootstrap</h3>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
+            Кнопка
         </button>
 
         <!-- Modal -->
@@ -82,6 +86,7 @@
     </div>
 
     <script type="module" src="script/script.js"></script>
+    <script src="https://kit.fontawesome.com/c57c1e8eb6.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

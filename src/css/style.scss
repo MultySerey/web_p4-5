@@ -3,14 +3,27 @@
 body {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
 }
 
 .jq,
 .bs {
     height: 100%;
     width: 50%;
-    border: black 1px solid;
+}
+
+.myClose {
+    aspect-ratio: 1;
+    max-width: 10%;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 5%;
+    right: 0;
+    border-radius: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: larger;
+    color: #000;
 }
 
 .slider-item {
@@ -18,15 +31,16 @@ body {
 }
 
 .guy {
-    transition: 1s ease;
+    position: absolute;
+    transition: transform 0.4s ease;
 }
 
-.jq-inner img {
-    display: none;
+.guy[data-status="unknown"] {
+    transform: translateX(50%) scale(0);
 }
 
-.jq-inner img.jq-active {
-    display: inline-block;
+.guy[data-status="after"] {
+    transform: translateX(-50%) scale(0);
 }
 
 .red {
